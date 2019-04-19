@@ -1,0 +1,21 @@
+<table class="table" >
+
+<div style>
+        <thead class="thead-dark">
+    <tr>
+    <th>Date</th>
+    <th>Humidity</th>
+    <th>temparature</th>
+    <th>pressure</th>
+    <th>image</th>
+    </tr>
+    </thead>
+    <tr *ngFor="let details of weatherDetails">
+        <td>{{details.date|date:'fullDate'}}</td>
+        <td>{{details.humidity }}</td>
+        <td>{{(details.temp-273).toPrecision(4)}}&deg;C</td>
+        <td>{{details.pressure }}</td>
+        <td><img src="http://openweathermap.org/img/w/{{details.image}}.png"></td>
+    </tr>
+</div>
+</table>

@@ -1,0 +1,10 @@
+
+<h2>Enter the city name</h2>
+
+<input [(ngModel)]="city" type="text" >
+
+<button (click)="method()">submit</button><br>
+
+<div *ngIf="submitted">
+  <app-result></app-result>
+</div>

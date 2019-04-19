@@ -3,14 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { WeatherComponent } from './weather/weather.component';
+import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WeatherComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
